@@ -3,7 +3,7 @@ import youtube_dl
         
 class Load:
     def __init__(self,value_user):
-        ydl_opts = {'outtmpl':'YoutubeAllDownloads/%(title)s.%(ext)s'}
+        ydl_opts = {'outtmpl':'Download/%(title)s.%(ext)s'}
 
         def dwl_vid():
             with youtube_dl.YoutubeDL(ydl_opts) as ydl:
