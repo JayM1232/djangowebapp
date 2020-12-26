@@ -1,5 +1,5 @@
 import youtube_dl
-import speech_recognition as sr
+# import speech_recognition as sr
         
 class Load:
     def __init__(self,value_user):
