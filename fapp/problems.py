@@ -1,7 +1,7 @@
 import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from io import StringIO,BytesIO
+
 port = 587  # For starttls
 smtp_server = "smtp.gmail.com"
 sender_email = "misaljay1221@gmail.com"
@@ -38,4 +38,3 @@ class Send_me:
             server.starttls(context=context)
             server.login(sender_email, password)
             server.sendmail(sender_email,receiver_email,self.message.as_string())
-Send_me('shubh','shubh@gmail.com','not working site')
