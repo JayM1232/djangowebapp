@@ -26,8 +26,8 @@ SECRET_KEY = 'knbf^g6_p&t6b04p-oy#k^743v#_%rt@3*@@4m@chvw45t*yps'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','tubeloads.herokuapp.com/']
-
+ALLOWED_HOSTS = ['tubeloads.herokuapp.com','127.0.0.1']
+# ALLOWED_HOSTS = []
 
 # Application definition
 
