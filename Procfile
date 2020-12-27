@@ -1,1 +1,1 @@
-web: gunicorn linkcre.wsgi --log-file -
+web:gunicorn linkcre.wsgi --log-file -
