@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
+# import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +26,7 @@ SECRET_KEY = 'knbf^g6_p&t6b04p-oy#k^743v#_%rt@3*@@4m@chvw45t*yps'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','tubeloads.herokuapp.com']
+ALLOWED_HOSTS = ['tubeloads.herokuapp.com','127.0.0.1']
 # ALLOWED_HOSTS = []
 
 # Application definition
@@ -77,11 +77,8 @@ WSGI_APPLICATION = 'linkcre.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dressdata',
-        'USER': 'postgres',
-        'PASSWORD': 'JAYMISAL12345',
-        'HOST': 'localhost'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -128,4 +125,4 @@ STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles")
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
 ]
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
