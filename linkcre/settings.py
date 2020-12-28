@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import sys
 import os
 # from django.conf.global_settings import STATIC_ROOT,STATICFILES_STORAGE,STATICFILES_DIRS,STATIC_URL
 # import django_heroku
@@ -122,10 +123,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+# if sys.argv[1] != 'runserver':
+#     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATICFILES_DIRS=[
-    os.path.join(BASE_DIR,'static'),
-]
+# STATICFILES_DIRS=[
+#     os.path.join(BASE_DIR,'static'),
+# ]
 
 # django_heroku.settings(locals())
